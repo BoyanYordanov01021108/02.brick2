@@ -1,33 +1,30 @@
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
+namespace _02.Bricks
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var x = double.Parse(Console.ReadLine());
+            var w = double.Parse(Console.ReadLine());
+            var m = double.Parse(Console.ReadLine());
+            var workbrick = x / w;
+            var works = Math.Round(workbrick);
+            var brickcourse = works / m;
+            var mincourse = Math.Round(brickcourse);
+            if (mincourse < 1)
+            {
+                Console.WriteLine(mincourse + 1);
+            }
+            else
+            {
+                Console.WriteLine(mincourse);
+            }
+        }
+    }
+}
